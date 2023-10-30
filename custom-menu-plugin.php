@@ -7,6 +7,7 @@ Author: Votre nom
 */
 
 function custom_menu_assets() {
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
     wp_enqueue_script('custom-menu-script', plugin_dir_url(__FILE__) . 'script.js', array('jquery'), '1.0.0', true);
     wp_enqueue_style('custom-menu-style', plugin_dir_url(__FILE__) . 'style.css');
 }
@@ -20,7 +21,7 @@ function custom_menu_shortcode() {
             <li>Présentation</li>
             <li class="has-submenu">
                 Visuels
-                <span class="arrow-down">&#x25BC;</span> <!-- flèche vers le bas -->
+                <span class="arrow-down"><i class="fas fa-chevron-down"></i></span> <!-- flèche vers le bas -->
                 <ul class="submenu">
                     <li>All</li>
                     <li>Digital Microcosm</li>

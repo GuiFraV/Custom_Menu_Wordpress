@@ -1,14 +1,31 @@
-.has-submenu .submenu {
-    display: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    border: 1px solid red;
+.custom-menu-container {
+    text-align: center;
 }
 
-.has-submenu .submenu:hover{
-    color: black;
+.custom-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    display: flex; /* Pour organiser les éléments du menu côte à côte */
+    justify-content: center; /* Centrer les éléments du menu horizontalement */
+    gap: 60px;
+}
+
+.custom-menu li {
+    cursor: pointer;
+    transition: 0.5s
+}
+
+.custom-menu li:hover {
+   color: #333
+}
+
+.custom-menu > .menu-item {
+    position: relative; /* Relatif pour permettre le positionnement absolu du sous-menu */
+    margin: 0 20px; /* Espacement entre les éléments du menu */
+    color: white; /* Font en blanc */
+    cursor: pointer;
 }
 
 .arrow-down {
@@ -16,8 +33,28 @@
     margin-left: 5px;
 }
 
-.submenu li {
-    padding: 5px;
-    cursor: pointer;
+.submenu {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute; 
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Fond noir avec 60% d'opacité (ajustez selon l'opacité souhaitée) */
+    border: none;
+    display: flex; 
+    justify-content: space-around; 
+    width: 80%; 
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    z-index: 999;
 }
 
+.submenu li {
+    padding: 10px 5px;
+    cursor: pointer;
+    flex: 1; 
+    text-align: center; 
+}
