@@ -1,0 +1,23 @@
+.has-submenu .submenu {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border: 1px solid red;
+}
+
+.has-submenu .submenu:hover{
+    color: black;
+}
+
+.arrow-down {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.submenu li {
+    padding: 5px;
+    cursor: pointer;
+}
+
